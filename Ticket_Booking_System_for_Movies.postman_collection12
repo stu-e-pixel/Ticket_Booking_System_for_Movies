@@ -1,0 +1,1902 @@
+{
+  "info": {
+    "_collection_link": "https://go.postman.co/collection/55954524-d9a6c263-cc17-40ac-9e11-e699d0968e08?source=collection_link",
+    "_exporter_id": "55954524",
+    "_postman_id": "d9a6c263-cc17-40ac-9e11-e699d0968e08",
+    "name": "Ticket_Booking_System_for_Movies",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "item": [
+        {
+          "name": "http://localhost:3038/v1/api/login",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n    \"email\":\"ticket5@yopmail.com\",\r\n    \"password\":\"123Rrr@123\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "login"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/login"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/createuser",
+          "request": {
+            "body": {
+              "formdata": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "value": "rakib"
+                },
+                {
+                  "key": "email",
+                  "type": "text",
+                  "value": "ticket5@yopmail.com"
+                },
+                {
+                  "key": "phone",
+                  "type": "text",
+                  "value": "8101243522"
+                },
+                {
+                  "key": "password",
+                  "type": "text",
+                  "value": "123Rrr@123"
+                },
+                {
+                  "key": "image",
+                  "src": [
+                    "/C:/Users/araki/OneDrive/Pictures/Screenshots 1/Screenshot 2026-10-14 185840.png"
+                  ],
+                  "type": "file"
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "createuser"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/createuser"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/verify",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n    \"email\": \"rakib12700@gmail.com\",\r\n    \"otp\": \"392821\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "verify"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/verify"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/refresh-token",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "refresh-token"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/refresh-token"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/getprofile",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0165}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "67a908d113478f7b0781b97ba9fd2f58167dd725262bb1a1a0ebecebbb76a55cbfee6046850b9306894a353da8a279c662e08a9cacf7d82dfede258628ba60ef"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "getprofile"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/getprofile"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/getAllUsers",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_19fl}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "getAllUsers"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/getAllUsers"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/reset-password/link",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n    \"email\":\"ticket5@yopmail.com\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "reset-password",
+                "link"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/reset-password/link"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/resetpassword/6aea2d24d5d99ac4d49560e5/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n    \"password\":\"1234Rrr@1234\",\r\n    \"comformpassword\":\"1234Rrr@1234\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "resetpassword",
+                "6aea2d24d5d99ac4d49560e5",
+                "{{vault:json_web_token_1c8g}}"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/resetpassword/6aea2d24d5d99ac4d49560e5/{{vault:json_web_token_1c8g}}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/update/profile/6aea2d24d5d99ac4d49560e5",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_1cy2}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n    \"name\":\"shisful\",\r\n    \"phone\":\"8965471235\"\r\n}"
+            },
+            "header": [],
+            "method": "PUT",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "update",
+                "profile",
+                "6aea2d24d5d99ac4d49560e5"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/update/profile/6aea2d24d5d99ac4d49560e5"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/updatepassword/6aea2d24d5d99ac4d49560e5",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{json_web_token_1cy2}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n    \"currentPassword\":\"1234Rrr@1234\",\r\n    \"newPassword\":\"123Rrr@123\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "updatepassword",
+                "6aea2d24d5d99ac4d49560e5"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/updatepassword/6aea2d24d5d99ac4d49560e5"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/deleteuser/6ae9ca0298411c7409ade5e8",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_19fl}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "624daa61b613ffac206199f5970c6ce9878bc7d0a753af27afea21727c21d551f3d68551fd448146440fbf39e91a97435c02cf0694ddc149122ff788056a371b"
+              }
+            ],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "deleteuser",
+                "6ae9ca0298411c7409ade5e8"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/deleteuser/6ae9ca0298411c7409ade5e8"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/retrivedeleteduser/6aea2d24d5d99ac4d49560e5",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_19fl}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": ""
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "624daa61b613ffac206199f5970c6ce9878bc7d0a753af27afea21727c21d551f3d68551fd448146440fbf39e91a97435c02cf0694ddc149122ff788056a371b"
+              }
+            ],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "retrivedeleteduser",
+                "6aea2d24d5d99ac4d49560e5"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/retrivedeleteduser/6aea2d24d5d99ac4d49560e5"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/forcedeleteduser/6ae9f449a12c0a12ac4e45fe",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_19fl}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "624daa61b613ffac206199f5970c6ce9878bc7d0a753af27afea21727c21d551f3d68551fd448146440fbf39e91a97435c02cf0694ddc149122ff788056a371b"
+              }
+            ],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "forcedeleteduser",
+                "6ae9f449a12c0a12ac4e45fe"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/forcedeleteduser/6ae9f449a12c0a12ac4e45fe"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/forcedeleteduser/6ae9f449a12c0a12ac4e45fe",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{json_web_token_19fl}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "forcedeleteduser",
+                "6ae9f449a12c0a12ac4e45fe"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/forcedeleteduser/6ae9f449a12c0a12ac4e45fe"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/logout",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_1bwr}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "69e330b7cfdfbca7d8935fdf6aef820af6ba53d319f023012c948ddad18a3033e94fc72297df6451b1b07068253d2d649dd4cf1ba6c38b17e5a775ea7fb57762"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "logout"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/logout"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/logout",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_1bwr}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "69e330b7cfdfbca7d8935fdf6aef820af6ba53d319f023012c948ddad18a3033e94fc72297df6451b1b07068253d2d649dd4cf1ba6c38b17e5a775ea7fb57762"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "logout"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/logout"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v1/api/resendotp",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n    \"email\":\"rakib12700@gmail.com\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v1",
+                "api",
+                "resendotp"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v1/api/resendotp"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "auth"
+    },
+    {
+      "item": [
+        {
+          "name": "http://localhost:3038/v2/api/addMovie",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "formdata": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "value": "Avengers: Endgame2"
+                },
+                {
+                  "key": "genre",
+                  "type": "text",
+                  "value": "Action, Adventure, Sci-Fi"
+                },
+                {
+                  "key": "language",
+                  "type": "text",
+                  "value": "English"
+                },
+                {
+                  "key": "duration",
+                  "type": "text",
+                  "value": "181"
+                },
+                {
+                  "key": "cast",
+                  "type": "text",
+                  "value": "Robert Downey Jr., Chris Evans, Mark Ruffalo"
+                },
+                {
+                  "key": "director",
+                  "type": "text",
+                  "value": "Anthony Russo"
+                },
+                {
+                  "key": "releaseDate",
+                  "type": "text",
+                  "value": "2019-04-26"
+                },
+                {
+                  "key": "description",
+                  "type": "text",
+                  "value": "After the devastating events of Infinity War..."
+                },
+                {
+                  "key": "poster",
+                  "src": [
+                    "/C:/Users/araki/OneDrive/Pictures/Screenshots 1/Screenshot 2026-09-09 083629.png"
+                  ],
+                  "type": "file"
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v2",
+                "api",
+                "addMovie"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v2/api/addMovie"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v2/api/getAllMovie",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v2",
+                "api",
+                "getAllMovie"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v2/api/getAllMovie"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v2/api/getMovieById/6aed93df019de94721196920",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v2",
+                "api",
+                "getMovieById",
+                "6aed93df019de94721196920"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v2/api/getMovieById/6aed93df019de94721196920"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v2/api/updateMovie/6aed93df019de94721196920",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "formdata": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "value": "Avengers: Endgame5"
+                },
+                {
+                  "key": "genre",
+                  "type": "text",
+                  "value": "Action, Adventure, Sci-Fi"
+                },
+                {
+                  "key": "language",
+                  "type": "text",
+                  "value": "English"
+                },
+                {
+                  "key": "duration",
+                  "type": "text",
+                  "value": "181"
+                },
+                {
+                  "key": "cast",
+                  "type": "text",
+                  "value": "Robert Downey Jr., Chris Evans, Mark Ruffalo"
+                },
+                {
+                  "key": "director",
+                  "type": "text",
+                  "value": "Anthony Russo"
+                },
+                {
+                  "key": "releaseDate",
+                  "type": "text",
+                  "value": "2019-04-26"
+                },
+                {
+                  "key": "description",
+                  "type": "text",
+                  "value": "After the devastating events of Infinity War..."
+                },
+                {
+                  "key": "poster",
+                  "src": [
+                    "/C:/Users/araki/OneDrive/Pictures/Screenshots 1/Screenshot 2026-09-13 193505.png"
+                  ],
+                  "type": "file"
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "PUT",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v2",
+                "api",
+                "updateMovie",
+                "6aed93df019de94721196920"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v2/api/updateMovie/6aed93df019de94721196920"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v2/api/softdeletmovie/6aedb5eddb9dad0e8654cbf7",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v2",
+                "api",
+                "softdeletmovie",
+                "6aedb5eddb9dad0e8654cbf7"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v2/api/softdeletmovie/6aedb5eddb9dad0e8654cbf7"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v2/api/retrieveDeletedMovie/6aed93df019de94721196920",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": ""
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v2",
+                "api",
+                "retrieveDeletedMovie",
+                "6aed93df019de94721196920"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v2/api/retrieveDeletedMovie/6aed93df019de94721196920"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v2/api/forceDeleteMovie/6aed93df019de94721196920",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v2",
+                "api",
+                "forceDeleteMovie",
+                "6aed93df019de94721196920"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v2/api/forceDeleteMovie/6aed93df019de94721196920"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "movie"
+    },
+    {
+      "item": [
+        {
+          "name": "http://localhost:3038/v3/api/addTheater",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"theaterName\": \"PVR Cinemas1\",\r\n  \"location\": \"Howrah, West Bengal\",\r\n  \"numberOfScreens\": 5\r\n}"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "addTheater"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/addTheater"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/getAllTheater",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "getAllTheater"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/getAllTheater"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/getTheaterById/6aeddc050b2803db9c920403",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "getTheaterById",
+                "6aeddc050b2803db9c920403"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/getTheaterById/6aeddc050b2803db9c920403"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/softdeletetheater/6aeddc050b2803db9c920403",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "softdeletetheater",
+                "6aeddc050b2803db9c920403"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/softdeletetheater/6aeddc050b2803db9c920403"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/updatetheater/6aeddc050b2803db9c920403",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"theaterName\": \"PVR Cinemas2\",\r\n  \"location\": \"Howrah, West Bengal\",\r\n  \"numberOfScreens\": 3\r\n}"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "PUT",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "updatetheater",
+                "6aeddc050b2803db9c920403"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/updatetheater/6aeddc050b2803db9c920403"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/retrivedeletetheater/6aeddc050b2803db9c920403",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": ""
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "retrivedeletetheater",
+                "6aeddc050b2803db9c920403"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/retrivedeletetheater/6aeddc050b2803db9c920403"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/forcedeletetheater/6aeddc050b2803db9c920403",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "forcedeletetheater",
+                "6aeddc050b2803db9c920403"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/forcedeletetheater/6aeddc050b2803db9c920403"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/assign-movie",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"theaterId\": \"6aedd6261f5f8ca516bf79df\",\r\n  \"screenNumber\": 2,\r\n  \"movieId\": \"6aedb5eddb9dad0e8654cbf7\",\r\n  \"showDate\": \"2026-11-10\",\r\n  \"showTime\": \"14:30\",\r\n  \"totalSeats\": 150,\r\n  \"ticketPrice\": 250\r\n}"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "assign-movie"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/assign-movie"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/assignMovieUpdate/6aee2bc2f0db216b750eaf92",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"theaterId\": \"6aedd608f1b73f7d0ff25dc9\",\r\n  \"screenNumber\": 2,\r\n  \"movieId\": \"6aedb5eddb9dad0e8654cbf7\",\r\n  \"showDate\": \"2026-11-10\",\r\n  \"showTime\": \"14:30\",\r\n  \"totalSeats\": 250,\r\n  \"ticketPrice\": 350\r\n}"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "assignMovieUpdate",
+                "6aee2bc2f0db216b750eaf92"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/assignMovieUpdate/6aee2bc2f0db216b750eaf92"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/getAllAssignMovie",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{json_web_token_16bb}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "6575d0c765e761b424cf6fc0b59f32ec045af4aa619e594960602d723a99f524d2bed066af8b1397e7c08c058c78a5b6f6872d1bcbcb8a7b2fe7c41146cbe242"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "getAllAssignMovie"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/getAllAssignMovie"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/getAssignMovie/6aee2bc2f0db216b750eaf92",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "getAssignMovie",
+                "6aee2bc2f0db216b750eaf92"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/getAssignMovie/6aee2bc2f0db216b750eaf92"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/deleteAssignMovie/6aee2bc2f0db216b750eaf92",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "deleteAssignMovie",
+                "6aee2bc2f0db216b750eaf92"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/deleteAssignMovie/6aee2bc2f0db216b750eaf92"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/retrieveDeletedAssignMovie/6aee2bc2f0db216b750eaf92",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": ""
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "retrieveDeletedAssignMovie",
+                "6aee2bc2f0db216b750eaf92"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/retrieveDeletedAssignMovie/6aee2bc2f0db216b750eaf92"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/forceDeleteAssignMovie/6aee2bc2f0db216b750eaf92",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0zgh}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "c4d190e7a7555cbfbc258635e2d4c7cd1d011963882a7963c8a715e8c01de2f7a119ee1339e1363084b929da8aaeae32960408b47def290308951492d2a83697"
+              }
+            ],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "forceDeleteAssignMovie",
+                "6aee2bc2f0db216b750eaf92"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/forceDeleteAssignMovie/6aee2bc2f0db216b750eaf92"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v3/api/movie/6aed8ef23dbe5896e46b1c00/theaters",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_142y}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "4fb6448503fc68d1bf96496cfab540260d556fe42f5ca810f756ee3ff16b38c90c528851b56e84e58daf2b1d5a01503911f33846d92834ab673f3c931969f9fb"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v3",
+                "api",
+                "movie",
+                "6aed8ef23dbe5896e46b1c00",
+                "theaters"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v3/api/movie/6aed8ef23dbe5896e46b1c00/theaters"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "theater"
+    },
+    {
+      "item": [
+        {
+          "name": "http://localhost:3038/v4/api/createBooking",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_16bb}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"movieId\": \"6aedb5eddb9dad0e8654cbf7\",\r\n  \"theaterId\": \"6aedd6261f5f8ca516bf79df\",\r\n  \"showId\": \"6aee386b29ff8207c2dd43e1\",\r\n  \"numberOfTickets\": 2\r\n}"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "6575d0c765e761b424cf6fc0b59f32ec045af4aa619e594960602d723a99f524d2bed066af8b1397e7c08c058c78a5b6f6872d1bcbcb8a7b2fe7c41146cbe242"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v4",
+                "api",
+                "createBooking"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v4/api/createBooking"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v4/api/history",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_16bb}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "6575d0c765e761b424cf6fc0b59f32ec045af4aa619e594960602d723a99f524d2bed066af8b1397e7c08c058c78a5b6f6872d1bcbcb8a7b2fe7c41146cbe242"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v4",
+                "api",
+                "history"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v4/api/history"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v4/api/6aeef0321ed7d7ecc8ac7821/cancel",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_16bb}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": ""
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "6575d0c765e761b424cf6fc0b59f32ec045af4aa619e594960602d723a99f524d2bed066af8b1397e7c08c058c78a5b6f6872d1bcbcb8a7b2fe7c41146cbe242"
+              }
+            ],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v4",
+                "api",
+                "6aeef0321ed7d7ecc8ac7821",
+                "cancel"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v4/api/6aeef0321ed7d7ecc8ac7821/cancel"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v4/api/getAllBookings",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_08zg}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "f18489d529892a8af5d65a92713a0ab26ee3eef39a25df9dd8110f716fb47935521be70c7987f0d284c6a0fe3a9aa652c8abe17ba68de24ca24a10bad693d6ed"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v4",
+                "api",
+                "getAllBookings"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v4/api/getAllBookings"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "booking"
+    },
+    {
+      "item": [
+        {
+          "name": "http://localhost:3038/v5/api/getMovieBookingReport",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_192w}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "f18489d529892a8af5d65a92713a0ab26ee3eef39a25df9dd8110f716fb47935521be70c7987f0d284c6a0fe3a9aa652c8abe17ba68de24ca24a10bad693d6ed"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v5",
+                "api",
+                "getMovieBookingReport"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v5/api/getMovieBookingReport"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v5/api/getTheaterBookingReport",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_08zg}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "f18489d529892a8af5d65a92713a0ab26ee3eef39a25df9dd8110f716fb47935521be70c7987f0d284c6a0fe3a9aa652c8abe17ba68de24ca24a10bad693d6ed"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v5",
+                "api",
+                "getTheaterBookingReport"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v5/api/getTheaterBookingReport"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:3038/v5/api/sendBookingSummary",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{vault:json_web_token_0d03}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [
+              {
+                "key": "x-secret-key",
+                "value": "299c4a73a1b3d038e6ead88c37cdf593dfbf04cde4e0ccf2f13270179d686adc3fdaba5f6c2df0ed2361b51be21b4ad210547bb8865cc5cf6f33a2e5343fa6aa"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "v5",
+                "api",
+                "sendBookingSummary"
+              ],
+              "port": "3038",
+              "protocol": "http",
+              "raw": "http://localhost:3038/v5/api/sendBookingSummary"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "report"
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_1cy2",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_19fl",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0zgh",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_16bb",
+      "secret": true
+    }
+  ]
+}
